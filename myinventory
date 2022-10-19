@@ -1,5 +1,5 @@
-[webservers]
-localhost ansible_user=ec2-user
+[tomcat]
+localhost ansible_user=ansadmin
 
 [External]
-172.31.78.69 ansible_user=ec2-user
+172.31.10.52 ansible_user=ansadmin
