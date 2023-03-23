@@ -1,8 +1,5 @@
-# Pull base image
-From tomcat:11-jre11
-
-# Maintainer
-MAINTAINER "devendra999"
-
-# copy war file on to container
-COPY ./maven-web-project-1.0-SNAPSHOT.war /opt/tomcat/webapps
+FROM tomcat:11.0-jre11
+MAINTAINER "devendragudelli999@gmail.com"
+COPY target/maven-web-project-1.0-SNAPSHOT.war /usr/local/tomcat/webapps
+EXPOSE 8090
+CMD ["catalina.sh", "run"]
